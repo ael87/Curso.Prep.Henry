@@ -5,12 +5,21 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
+  if (x > y) {
+    return x
+  }else {
+  return y}
 }
 
 function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
+  if (edad>=18){
+    return 'Allowed'
+  }else{
+    return 'Not allowed'
+  }
 }
   
 function conection(status) {
@@ -19,6 +28,13 @@ function conection(status) {
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
+  if (status == 1){
+    return 'Online'
+  }else if (status == 2) {
+    return 'Away'
+  }else{
+    return 'Offline'
+  }
 }
 
 function saludo(idioma) {
@@ -38,18 +54,31 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
+  switch(color){
+    case 'blue': return 'This is blue';
+    case 'red': return 'This is red';
+    case 'green': return 'This is green';
+    case 'orage': return 'This is orange';
+    default: return 'Color not found';
+  }
 }
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
+  if (numero === 5 || numero === 10){
+    return true
+  }else{
+    return false
+  }
 }
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
+
 }
 
 function esEntero(numero) {
@@ -60,6 +89,11 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
+  if (numero % 1 === 0){
+    return true
+  }else{
+    return false
+  }
 }
 
 function fizzBuzz(numero) {
@@ -67,6 +101,16 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
+  if (numero % 15 === 0){
+    return 'fizzbuzz'
+  }
+  if (numero % 5 === 0){
+    return 'buzz'
+  }
+  if (numero % 3 === 0){
+    return 'fizz'
+  }
+  return numero
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -84,6 +128,16 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+  if (numero === 0 || numero === 1){
+    return false
+  }
+  for (i=2;i<numero;i++){
+    if (i % numero ==0){
+      return true
+    }else{
+      return false
+    }
+  }
 }
 
 function esVerdadero(valor){
